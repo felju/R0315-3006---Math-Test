@@ -35,6 +35,7 @@
               from total_points as tp 
               inner join users as us 
                 on tp.FK_studentId = us.studentId
+              where us.teacher = 0
               order by FK_studentId";
             $result = $conn->query($sql_stmt);
 

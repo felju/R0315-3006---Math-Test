@@ -40,6 +40,9 @@
           // if credentials are wrong, redirect to login page
           header("location:login.php?Invalid=Please enter a valid combination of Student ID and Password.");
         }
+      } else {
+        // if ID does not exist
+        header("location:login.php?Invalid=Please enter a valid combination of Student ID and Password.");
       }
     }
   }

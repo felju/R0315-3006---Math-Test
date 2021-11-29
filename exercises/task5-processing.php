@@ -56,12 +56,13 @@
             $_SESSION['submission_counter']++;
             
             // array with correct solutions
-            $arr_solutions = array("9","39","22","16","44","XLVIII","XXXII","XX","XIV","XLVI");
+            $arr_solutions1 = array("9","39","22","16","44","XLVIII","XXXII","XX","XIV","XLVI");
+            $arr_solutions2 = array("9","39","22","16","44","xlviii","xxxii","xx","xiv","xlvi");
 
             // create evaluation array
             $arr_evaluation = array();
             for($h=0;$h<=9;$h++){
-                if($arr_inserted[$h] == $arr_solutions[$h]){
+                if(($arr_inserted[$h] == $arr_solutions1[$h]) || ($arr_inserted[$h] == $arr_solutions2[$h])){
                     array_push($arr_evaluation, 1);
                 } else{
                     array_push($arr_evaluation, 0);

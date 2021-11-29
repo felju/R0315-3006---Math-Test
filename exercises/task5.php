@@ -6,9 +6,7 @@
   $_SESSION['session_timeout'] = 600; // 600 Sec./60 Sec. = 10 Minutes
 
   // set time when session starts, if not set yet
-  if (!isset($_SESSION['last_visit'])) {
-    $_SESSION['last_visit'] = time();
-  }
+  $_SESSION['last_visit'] = time();
 
   // check if session is still valid
   if((time() - $_SESSION['last_visit']) > $_SESSION['session_timeout']) {
